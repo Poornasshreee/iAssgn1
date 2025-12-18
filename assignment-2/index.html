@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Docker Networking</title>
+</head>
+<body>
+  <h1>Web Container</h1>
+  <button onclick="fetchAPI()">Call API</button>
+  <p id="result"></p>
+
+  <script>
+    function fetchAPI() {
+      fetch('http://api:5678')
+        .then(res => res.text())
+        .then(data => document.getElementById('result').innerText = data);
+    }
+  </script>
+</body>
+</html>
